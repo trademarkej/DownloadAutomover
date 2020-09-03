@@ -1,0 +1,256 @@
+{
+  "Categories": [
+    {
+      "CatId": 1,
+      "Value": "Anime"
+    },
+    {
+      "CatId": 2,
+      "Value": "Anime_Movies"
+    },
+    {
+      "CatId": 3,
+      "Value": "Animated_Movies"
+    },
+    {
+      "CatId": 4,
+      "Value": "Movies"
+    },
+    {
+      "CatId": 5,
+      "Value": "TV"
+    },
+    {
+      "CatId": 6,
+      "Value": "TV_Babs"
+    },
+    {
+      "CatId": 7,
+      "Value": "TV_Colleen"
+    },
+    {
+      "CatId": 8,
+      "Value": "TV_Kids"
+    }
+  ],
+  "IgnoreItems": [
+    {
+      "IgnrId": 1,
+      "Value": "featurette",
+      "Type": 1
+    },
+    {
+      "IgnrId": 2,
+      "Value": "sample",
+      "Type": 1
+    }
+  ],
+  "MediaTypes": [
+    {
+      "MedId": 1,
+      "Value": ".avi",
+      "Type": 0
+    },
+    {
+      "MedId": 2,
+      "Value": ".mkv",
+      "Type": 0
+    },
+    {
+      "MedId": 3,
+      "Value": ".mp4",
+      "Type": 0
+    },
+    {
+      "MedId": 4,
+      "Value": ".srt",
+      "Type": 1
+    },
+    {
+      "MedId": 5,
+      "Value": ".sub",
+      "Type": 1
+    }
+  ],
+  "RedirectItems": [
+    {
+      "RedId": 1,
+      "Value": "teen.titans.go",
+      "Type": 7
+    },
+    {
+      "RedId": 2,
+      "Value": "spongebob.squarepants",
+      "Type": 7
+    },
+    {
+      "RedId": 3,
+      "Value": "Outlander",
+      "Type": 6
+    },
+    {
+      "RedId": 4,
+      "Value": "This.Is.Us",
+      "Type": 6
+    },
+    {
+      "RedId": 5,
+      "Value": "Power",
+      "Type": 5
+    },
+    {
+      "RedId": 6,
+      "Value": "Homeland",
+      "Type": 4
+    },
+    {
+      "RedId": 7,
+      "Value": "Mcmillions",
+      "Type": 5
+    },
+    {
+      "RedId": 8,
+      "Value": "One.Punch.Man",
+      "Type": 0
+    },
+    {
+      "RedId": 9,
+      "Value": "Snowpiercer",
+      "Type": 4
+    },
+    {
+      "RedId": 10,
+      "Value": "Hightown",
+      "Type": 5
+    },
+    {
+      "RedId": 11,
+      "Value": "The.Chi",
+      "Type": 5
+    },
+    {
+      "RedId": 12,
+      "Value": "Boruto(.*)?",
+      "Type": 0
+    },
+    {
+      "RedId": 13,
+      "Value": "Fruits.Basket",
+      "Type": 0
+    },
+    {
+      "RedId": 14,
+      "Value": "ill.be.gone.in.the.dark",
+      "Type": 5
+    },
+    {
+      "RedId": 15,
+      "Value": "brave.new.world",
+      "Type": 5
+    }
+  ],
+  "RenameItems": [
+    {
+      "RenId": 1,
+      "Value": "my.hero.academia",
+      "Rename": "Boku no Hero Academia"
+    },
+    {
+      "RenId": 2,
+      "Value": "mugen.no.juunin.(blade.of.the.immortal)",
+      "Rename": "Blade of the Immortal"
+    },
+    {
+      "RenId": 3,
+      "Value": "shameless.us",
+      "Rename": "Shameless (US)"
+    },
+    {
+      "RenId": 4,
+      "Value": "lego.masters.us",
+      "Rename": "Lego Masters"
+    },
+    {
+      "RenId": 5,
+      "Value": "Penny.dreadful.city.of.angels",
+      "Rename": "Penny Dreadful- City of Angels"
+    },
+    {
+      "RenId": 6,
+      "Value": "one.punch.man",
+      "Rename": "One Punch Man"
+    },
+    {
+      "RenId": 7,
+      "Value": "america.s.got.talent",
+      "Rename": "America's Got Talent"
+    },
+    {
+      "RenId": 8,
+      "Value": "perry.mason",
+      "Rename": "Perry Mason (2020)"
+    },
+    {
+      "RenId": 9,
+      "Value": "ill.be.gone.in.the.dark",
+      "Rename": "I'll Be Gone in the Dark"
+    },
+    {
+      "RenId": 10,
+      "Value": "brave.new.world",
+      "Rename": "Brave New World (2020)"
+    }
+  ],
+  "Settings": [
+    {
+      "Description": "MonitorLocation",
+      "Value": "Z:\\Downloads\\Completed"
+    },
+    {
+      "Description": "MediaFolder",
+      "Value": "Z:\\Videos"
+    },
+    {
+      "Description": "IsDbSetup",
+      "Value": "True"
+    },
+    {
+      "Description": "CleanFolders",
+      "Value": "True"
+    }
+  ],
+  "SubFolders": [
+    {
+      "SubId": 1,
+      "Value": "Anime Shows"
+    },
+    {
+      "SubId": 2,
+      "Value": "Anime Movies"
+    },
+    {
+      "SubId": 3,
+      "Value": "Animated Movies"
+    },
+    {
+      "SubId": 4,
+      "Value": "Movies"
+    },
+    {
+      "SubId": 5,
+      "Value": "TV"
+    },
+    {
+      "SubId": 6,
+      "Value": "TV_Babs"
+    },
+    {
+      "SubId": 7,
+      "Value": "TV_Colleen"
+    },
+    {
+      "SubId": 8,
+      "Value": "TV_Kids"
+    }
+  ]
+}
