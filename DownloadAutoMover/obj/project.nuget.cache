@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FEYdECgbCVGIe/w5/ckhJ3P2GpYHusMjlnz+q/KuSZt3S8NME2ickeSIqsyjUpXMEIuC0hyA/IGJ3CKU4xYnlQ==",
+  "dgSpecHash": "G7ypHccobFilxmaSZMZqeYuQsV79TTmWebJf1KC5RNKsH5vIqCK1+qT1WKKPund1Psgp3GSncGVYrNCafUSnzw==",
   "success": true,
   "projectFilePath": "C:\\Users\\patrick.hewes\\Google Drive\\Workspace\\vs_source\\DownloadAutoMover\\DownloadAutoMover\\DownloadAutoMover.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,8 @@
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.7\\microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.2\\sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\sqlitepclraw.core\\2.0.2\\sqlitepclraw.core.2.0.2.nupkg.sha512",
@@ -33,9 +35,16 @@
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.2\\sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.text.json\\4.7.1\\system.text.json.4.7.1.nupkg.sha512"
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.text.json\\4.7.1\\system.text.json.4.7.1.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

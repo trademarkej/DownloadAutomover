@@ -1,8 +1,4 @@
 using DownloadAutoMover.Classes;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -97,13 +93,12 @@ namespace DownloadAutoMover.Tests
         {
             int i = 0;
             string[] descs = { "MonitorLocation", "MediaFolder", "IsDbSetup", "CleanFolders" };
-            string[] values = { "Z:\\Downloads\\Completed", "Z:\\Videos", "True", "True", };
+            string[] values = { "D:\\Downloads\\Completed", "D:\\Videos", "True", "True", };
             var results = mainForm.GetSettings();
             foreach (string desc in descs)
             {
-                Assert.True(
-                    results.Find(x => x.Description.Contains(desc)).Value.Equals(values[i++])
-                    );
+                Assert.True(results.Find(x => x.Description.Contains(desc)).Value.Equals(values[i]));
+                i++;
             }
         }
 
@@ -122,7 +117,7 @@ namespace DownloadAutoMover.Tests
         }
 
         [Fact]
-        public void CategorySelected_Test()
+        public void CategorySelected_Tests()
         {
             int i = 0;
             string[,] values = new string[8,2] {
@@ -144,7 +139,7 @@ namespace DownloadAutoMover.Tests
         }
 
         [Fact]
-        public void RedirectSelected_Test()
+        public void RedirectSelected_Tests()
         {
             int i = 0;
             string[,] values = new string[15, 2] {
@@ -173,7 +168,7 @@ namespace DownloadAutoMover.Tests
         }
 
         [Fact]
-        public void RenameSelected_Test()
+        public void RenameSelected_Tests()
         {
             int i = 0;
             string[,] values = new string[10, 2] {
@@ -197,7 +192,7 @@ namespace DownloadAutoMover.Tests
         }
 
         [Fact]
-        public void IgnoreSelected_Test()
+        public void IgnoreSelected_Tests()
         {
             int i = 0;
             string[,] values = new string[2, 2] {
@@ -209,33 +204,6 @@ namespace DownloadAutoMover.Tests
             {
                 Assert.True(x.Ignores.Equals(values[i, 0]));
                 Assert.True(x.Value.Equals(values[i++, 1]));
-            }
-        }
-
-        [Fact]
-        public void FolderContents_Test()
-        {
-            int i = 0;
-            string path = "Z:\\Downloads\\Completed";
-            string[] values = { "New Text Document.txt" };
-            var fileList = mainForm.ProcessDirectory(path);
-            foreach (string file in fileList)
-            {
-                Assert.True(file.Equals(path + "\\" + values[i++]));
-            }
-        }
-
-        [Fact]
-        public void CapitalizeText_Test()
-        {
-            /* https://github.com/guessit-io/guessit */
-
-            int i = 0;
-            string[] values = { "test", "blah" };
-            string[] results = { "Test", "Blah" };
-            foreach (string value in values)
-            {
-                Assert.True(results[i++].Equals(mainForm.FirstCharToUpper(value)));
             }
         }
     }

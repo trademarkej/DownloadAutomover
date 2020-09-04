@@ -204,11 +204,11 @@
   "Settings": [
     {
       "Description": "MonitorLocation",
-      "Value": "Z:\\Downloads\\Completed"
+      "Value": "D:\\Downloads\\Completed"
     },
     {
       "Description": "MediaFolder",
-      "Value": "Z:\\Videos"
+      "Value": "D:\\Videos"
     },
     {
       "Description": "IsDbSetup",

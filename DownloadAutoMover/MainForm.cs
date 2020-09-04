@@ -1,12 +1,7 @@
 ﻿using Microsoft.Data.Sqlite;
 using DownloadAutoMover.Classes;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.IO;
-using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace DownloadAutoMover
 {
@@ -252,40 +247,6 @@ namespace DownloadAutoMover
                 );
             }
             return list;
-        }
-
-        public List<string> ProcessDirectory(string targetDirectory)
-        {
-            List<string> list = new List<string>();
-            // Process the list of files found in the directory.
-            string[] fileEntries = Directory.GetFiles(targetDirectory);
-            foreach (string fileName in fileEntries)
-            {
-                list.Add(fileName);
-            }
-
-            // Recurse into subdirectories of this directory.
-            string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
-            foreach (string subdirectory in subdirectoryEntries)
-                ProcessDirectory(subdirectory);
-
-            return list;
-        }
-
-        public string FirstCharToUpper(string str)
-        {
-            if (str == null)
-                return null;
-
-            if (str.Length > 1)
-                return char.ToUpper(str[0]) + str.Substring(1);
-
-            return str.ToUpper();
-        }
-
-        public string[] GetRegExPattern(string key)
-        {
-            return key.Split(';');
         }
     }
 }

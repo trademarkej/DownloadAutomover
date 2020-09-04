@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadAutoMover", "DownloadAutoMover\DownloadAutoMover.csproj", "{5221A428-F1FE-4E74-9C7E-997A415DDD51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadAutoMover.Tests", "..\DownloadAutoMover.Tests\DownloadAutoMover.Tests.csproj", "{2F6F18BD-CD06-4680-9D04-EBD10AE112B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadAutoMover.Tests", "DownloadAutoMover.Tests\DownloadAutoMover.Tests.csproj", "{2F6F18BD-CD06-4680-9D04-EBD10AE112B6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5221A428-F1FE-4E74-9C7E-997A415DDD51} = {5221A428-F1FE-4E74-9C7E-997A415DDD51}
 	EndProjectSection
