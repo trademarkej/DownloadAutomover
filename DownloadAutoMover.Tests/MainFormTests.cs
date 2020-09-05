@@ -1,5 +1,4 @@
 using DownloadAutoMover.Classes;
-using System.Linq;
 using Xunit;
 
 namespace DownloadAutoMover.Tests

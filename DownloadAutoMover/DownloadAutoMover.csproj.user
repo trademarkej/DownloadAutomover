@@ -6,4 +6,5 @@
   <PropertyGroup>
     <ActiveDebugProfile>DownloadAutoMover</ActiveDebugProfile>
   </PropertyGroup>
+  <ItemGroup />
 </Project>

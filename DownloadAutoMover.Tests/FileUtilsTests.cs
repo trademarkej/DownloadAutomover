@@ -1,5 +1,4 @@
 ﻿using DownloadAutoMover.Classes;
-using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using System.Text.RegularExpressions;
@@ -105,7 +104,8 @@ namespace DownloadAutoMover.Tests
             InitializeMainForm();
             string src = mainForm.GetSettings().Find(x => x.Description.Equals("MonitorLocation")).Value.ToString();
             string dest = mainForm.GetSettings().Find(x => x.Description.Equals("MediaFolder")).Value.ToString();
-            fileUtils.ParseFiles(src, dest);
+            fileUtils.ParseFilesNew(src, dest);
+            
         }
     }
 }

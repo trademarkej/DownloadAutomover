@@ -23,20 +23,19 @@ namespace DownloadAutoMover
 
         public string CapitalizeFirstLetters(string str)
         {
-            //string[] words = str.Split(' ');
-            string word = str;
+            string[] words = str.Split(' ');
             string newStr = "";
-            //foreach (string word in words)
-            //{
-            string tmp = "";
-            if (word.Length == 0)
-                System.Console.WriteLine("Empty String");
-            else if (word.Length == 1)
-                tmp = char.ToUpper(word[0]).ToString();
-            else
-                tmp = char.ToUpper(word[0]) + word.Substring(1);
-            newStr += " " + tmp;
-            //}
+            foreach (string word in words)
+            {
+                string tmp = "";
+                if (word.Length == 0)
+                    Console.WriteLine("Empty String");
+                else if (word.Length == 1)
+                    tmp = char.ToUpper(word[0]).ToString();
+                else
+                    tmp = char.ToUpper(word[0]) + word.Substring(1);
+                newStr += " " + tmp;
+            }
             return newStr;
         }
 

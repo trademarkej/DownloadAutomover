@@ -1,7 +1,3 @@
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.AssemblyInfoInputs.cache
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.AssemblyInfo.cs
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.RazorAssemblyInfo.cache
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.RazorAssemblyInfo.cs
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\databases.json
@@ -40,7 +36,9 @@ C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\Downlo
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
@@ -54,6 +52,13 @@ C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\Downlo
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.AssemblyInfoInputs.cache
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.AssemblyInfo.cs
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.csproj.CoreCompileInputs.cache
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.RazorAssemblyInfo.cache
+C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.RazorAssemblyInfo.cs
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.TagHelpers.input.cache
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.TagHelpers.output.cache
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.RazorCoreGenerate.cache
@@ -74,8 +79,3 @@ C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\Downlo
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.pdb
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.genruntimeconfig.cache
 C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.csprojAssemblyReference.cache
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.csproj.CoreCompileInputs.cache
-C:\Users\patrick.hewes\Google Drive\Workspace\vs_source\DownloadAutoMover\DownloadAutoMover\obj\Debug\netcoreapp3.1\DownloadAutoMover.MvcApplicationPartsAssemblyInfo.cache

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "G7ypHccobFilxmaSZMZqeYuQsV79TTmWebJf1KC5RNKsH5vIqCK1+qT1WKKPund1Psgp3GSncGVYrNCafUSnzw==",
+  "dgSpecHash": "ov3WVJmUzeOCqZ5QYYk8oyDiY/BGYp4H8+D3CTOahckvXRprzbQ3DWX9V9Chk9au5t1vkzzHJdx4TGSx9fE5PA==",
   "success": true,
   "projectFilePath": "C:\\Users\\patrick.hewes\\Google Drive\\Workspace\\vs_source\\DownloadAutoMover\\DownloadAutoMover\\DownloadAutoMover.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.typescript.msbuild\\4.0.2\\microsoft.typescript.msbuild.4.0.2.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\patrick.hewes\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.2\\sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",

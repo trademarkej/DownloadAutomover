@@ -26,6 +26,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "3.1.7",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.7",
+          "Microsoft.TypeScript.MSBuild": "4.0.2",
           "Newtonsoft.Json": "12.0.3",
           "System.Configuration.ConfigurationManager": "4.7.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -590,6 +591,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
+      "Microsoft.TypeScript.MSBuild/4.0.2": {},
       "Microsoft.Win32.SystemEvents/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0"
@@ -2589,6 +2591,13 @@
       "sha512": "sha512-z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "path": "microsoft.netcore.platforms/3.1.0",
       "hashPath": "microsoft.netcore.platforms.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.TypeScript.MSBuild/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vLrqOLd1vpOD73rBVNejxiJQrIrK33p6uRpXSSIWWCr0qzLUiPg/uCQKAFeKr+R5c/W+cCDRtMBTDw3nVBgCbw==",
+      "path": "microsoft.typescript.msbuild/4.0.2",
+      "hashPath": "microsoft.typescript.msbuild.4.0.2.nupkg.sha512"
     },
     "Microsoft.Win32.SystemEvents/4.7.0": {
       "type": "package",

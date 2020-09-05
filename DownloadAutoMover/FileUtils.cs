@@ -9,6 +9,8 @@ namespace DownloadAutoMover
 {
     public class FileUtils
     {
+        EpisodeParser episodeParser = new EpisodeParser();
+
         //----------------------------------------------------------
         // Cleanup sub-folders from main Category directory
         //----------------------------------------------------------
@@ -188,6 +190,8 @@ namespace DownloadAutoMover
         //https://www.npmjs.com/package/episode-parser
         public void ParseFilesNew(string source, string dest)
         {
+            int i = 0;
+            int j = 0;
             CatLists.ForEach(dir =>
             {
                 string fp = Path.Combine(source, dir);
@@ -197,6 +201,9 @@ namespace DownloadAutoMover
                     foreach (string file in files)
                     {
                         FileInfo fi = new FileInfo(file);
+                        var episode = episodeParser.GetTvEpisode(fi.Name);
+                        string msf = SfLists[i] + '\\' + fi.Name;
+                        string mDest = Path.Combine(dest, msf);
                     }
                 }
             });
