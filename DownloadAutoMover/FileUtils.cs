@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DownloadAutoMover.Classes;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -9,7 +11,12 @@ namespace DownloadAutoMover
 {
     public class FileUtils
     {
-        EpisodeParser episodeParser = new EpisodeParser();
+        EpisodeParser episodeParser;
+
+        public FileUtils(string dbName)
+        {
+            episodeParser = new EpisodeParser(dbName);
+        }
 
         //----------------------------------------------------------
         // Cleanup sub-folders from main Category directory
@@ -200,13 +207,59 @@ namespace DownloadAutoMover
                     var files = GetFiles(fp);
                     foreach (string file in files)
                     {
+                        TvEpisode tvEpisode = null;
+                        Movie movie = null;
                         FileInfo fi = new FileInfo(file);
-                        var episode = episodeParser.GetTvEpisode(fi.Name);
-                        string msf = SfLists[i] + '\\' + fi.Name;
-                        string mDest = Path.Combine(dest, msf);
+                        if (!fi.DirectoryName.Contains("Movie"))
+                        {
+                            tvEpisode = episodeParser.GetTvEpisode(fi.Name);
+                            tvEpisode.Category = GetCategoryId(fi.FullName);
+                            tvEpisode.Path = Path.Combine(
+                                dest, 
+                                SfLists[tvEpisode.Category] + '\\' + tvEpisode.Title + '\\' + fi.Name
+                                );
+                            //SfLists[tvEpisode.Category] + '\\' + tvEpisode.Title + '\\' + fi.Name;
+                        }
+                        else
+                        {
+                            // var show = movieParser.GetMovie(fi.Name);
+                        }
                     }
                 }
             });
+        }
+
+        private int GetCategoryId(string str)
+        {
+            int i = 0;
+            int catId = GetRedirectId(str);
+            if (catId == 0)
+            {
+                foreach (string category in CatLists)
+                {
+                    if (str.Contains(category))
+                    {
+                        catId = i;
+                    }
+                    i++;
+                }
+            }
+            return catId;
+        }
+
+        private int GetRedirectId(string str)
+        {
+            int redId = 0;
+            foreach (RedirectItem ri in RiLists)
+            {
+                var tmp = Regex.Match(str, ri.Value, RegexOptions.IgnoreCase);
+                if (tmp.Length > 0)
+                {
+                    redId = ri.Type;
+                    break;
+                }
+            }
+            return redId;
         }
 
         //----------------------------------------------------------
@@ -285,7 +338,7 @@ namespace DownloadAutoMover
         public string LogLocation { get; set; }
         public List<string> MediaTypes { get; set; }
         public int MoveCount { get; set; }
-        public string[] RiLists { get; set; }
+        public List<RedirectItem> RiLists { get; set; }
         public string[] RenLists { get; set; }
         public string[] SfLists { get; set; }
         public bool UseLog { get; set; }

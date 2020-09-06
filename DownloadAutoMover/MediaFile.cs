@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DownloadAutoMover.Classes;
+using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -12,7 +14,7 @@ namespace DownloadAutoMover
 
         }
 
-        public MediaFile(int i, string[] sfs, string[] ris, string[] res)
+        public MediaFile(int i, string[] sfs, List<RedirectItem> ris, string[] res)
         {
             var rex = @"^(.*)?Movies(.*)?";
             aOrT = !Regex.IsMatch(sfs[i], rex, RegexOptions.IgnoreCase);
@@ -75,9 +77,9 @@ namespace DownloadAutoMover
         {
             bool rexMatch = false;
             int i = 0;
-            foreach (string val in ris)
+            foreach (RedirectItem ri in ris)
             {
-                string[] tmpVals = val.Split(',');
+                string[] tmpVals = ri.Value.Split(',');
                 rexMatch = Regex.IsMatch(showName, tmpVals[0], RegexOptions.IgnoreCase);
                 if (rexMatch)
                 {
@@ -197,7 +199,7 @@ namespace DownloadAutoMover
 
         public string[] res { get; set; }
 
-        public string[] ris { get; set; }
+        public List<RedirectItem> ris { get; set; }
 
         public string[] sfs { get; set; }
 

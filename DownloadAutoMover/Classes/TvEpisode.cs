@@ -16,5 +16,8 @@ namespace DownloadAutoMover.Classes
         public string Group { get; set; }
         [Required]
         public string Quality { get; set; }
+        [Required]
+        public int Category { get; set; }
+        public string Path { get; set; }
     }
 }

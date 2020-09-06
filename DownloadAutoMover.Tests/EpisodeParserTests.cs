@@ -8,6 +8,9 @@ namespace DownloadAutoMover.Tests
     {
         public EpisodeParser episodeParser;
         private readonly string[] ShowNames = {
+            //gci -recurse | Where { !$_.PSIsContainer } | Select-Object Name
+            "[HorribleSubs] Boruto - Naruto Next Generations - S01E140 [720p]",
+            "[Hakata Ramen] Blade of the Immortal S01E14 [1080 x265].mkv",
             "[Judas] Mugen no Juunin (Blade of the Immortal) - 15 [1080p][HEVC x265 10bit][Eng-Subs].mkv",
             "Americas.Got.Talent.S14E24.WEB.h264-TBS[rarbg].mp4",
             "Dracula.2020.S01E01.HDTV.x264-PHOENiX[TGx].mkv",
@@ -28,7 +31,8 @@ namespace DownloadAutoMover.Tests
 
         public EpisodeParserTests() 
         {
-            episodeParser = new EpisodeParser();
+            string dbName = "C:\\Users\\patrick.hewes\\Google Drive\\Workspace\\vs_source\\DownloadAutoMover\\DownloadAutoMover\\DownloadAutoMover.db";
+            episodeParser = new EpisodeParser(dbName);
         }
 
         [Fact]

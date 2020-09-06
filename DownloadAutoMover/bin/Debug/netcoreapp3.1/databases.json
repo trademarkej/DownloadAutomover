@@ -157,7 +157,7 @@
     },
     {
       "RenId": 2,
-      "Value": "mugen.no.juunin.(blade.of.the.immortal)",
+      "Value": "mugen.no.juunin.\\(blade.of.the.immortal\\)",
       "Rename": "Blade of the Immortal"
     },
     {
@@ -199,6 +199,11 @@
       "RenId": 10,
       "Value": "brave.new.world",
       "Rename": "Brave New World (2020)"
+    },
+    {
+      "RenId": 11,
+      "Value": "Boruto(.*)?",
+      "Rename": "Boruto - Naruto Next Generations"
     }
   ],
   "Settings": [

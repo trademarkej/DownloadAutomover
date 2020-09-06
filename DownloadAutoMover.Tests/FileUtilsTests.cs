@@ -15,7 +15,7 @@ namespace DownloadAutoMover.Tests
         {
             string dbName = "C:\\Users\\patrick.hewes\\Google Drive\\Workspace\\vs_source\\DownloadAutoMover\\DownloadAutoMover\\DownloadAutoMover.db";
             mainForm = new MainForm(dbName);
-            fileUtils = new FileUtils
+            fileUtils = new FileUtils(dbName)
             {
                 Debug = true,
                 LogLocation = path + "Torrents\\Logs",
@@ -31,7 +31,7 @@ namespace DownloadAutoMover.Tests
             fileUtils.IgList = mainForm.GetIgnoreItems().FindAll(x => x.Type.Equals(1)).Select(x => x.Value).ToArray();
             fileUtils.CatLists = mainForm.GetCategories().Select(x => x.Value).ToList();
             fileUtils.RenLists = mainForm.GetRenameItems().Select(x => x.Value).ToArray();
-            fileUtils.RiLists = mainForm.GetRedirectItems().Select(x => x.Value).ToArray();
+            fileUtils.RiLists = mainForm.GetRedirectItems();
             fileUtils.SfLists = mainForm.GetSubFolders().Select(x => x.Value).ToArray();
         }
 
@@ -105,7 +105,6 @@ namespace DownloadAutoMover.Tests
             string src = mainForm.GetSettings().Find(x => x.Description.Equals("MonitorLocation")).Value.ToString();
             string dest = mainForm.GetSettings().Find(x => x.Description.Equals("MediaFolder")).Value.ToString();
             fileUtils.ParseFilesNew(src, dest);
-            
         }
     }
 }

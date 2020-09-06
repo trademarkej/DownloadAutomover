@@ -76,7 +76,7 @@ namespace DownloadAutoMover.Tests
         public void RenameItems_Tests()
         {
             int i = 0;
-            string[] values = { "my.hero.academia", "mugen.no.juunin.(blade.of.the.immortal)", "shameless.us", "lego.masters.us", "Penny.dreadful.city.of.angels", "one.punch.man", "america.s.got.talent", "perry.mason", "ill.be.gone.in.the.dark", "brave.new.world" };
+            string[] values = { "my.hero.academia", "mugen.no.juunin.\\(blade.of.the.immortal\\)", "shameless.us", "lego.masters.us", "Penny.dreadful.city.of.angels", "one.punch.man", "america.s.got.talent", "perry.mason", "ill.be.gone.in.the.dark", "brave.new.world" };
             string[] renames = { "Boku no Hero Academia", "Blade of the Immortal", "Shameless (US)", "Lego Masters", "Penny Dreadful- City of Angels", "One Punch Man", "America's Got Talent", "Perry Mason (2020)", "I'll Be Gone in the Dark", "Brave New World (2020)", };
             var results = mainForm.GetRenameItems();
             foreach (string value in values)
@@ -170,9 +170,9 @@ namespace DownloadAutoMover.Tests
         public void RenameSelected_Tests()
         {
             int i = 0;
-            string[,] values = new string[10, 2] {
+            string[,] values = new string[11, 2] {
                 { "my.hero.academia", "Boku no Hero Academia" },
-                { "mugen.no.juunin.(blade.of.the.immortal)", "Blade of the Immortal" },
+                { "mugen.no.juunin.\\(blade.of.the.immortal\\)", "Blade of the Immortal" },
                 { "shameless.us", "Shameless (US)" },
                 { "lego.masters.us", "Lego Masters" },
                 { "Penny.dreadful.city.of.angels", "Penny Dreadful- City of Angels" },
@@ -180,7 +180,8 @@ namespace DownloadAutoMover.Tests
                 { "america.s.got.talent", "America's Got Talent" },
                 { "perry.mason", "Perry Mason (2020)" },
                 { "ill.be.gone.in.the.dark", "I'll Be Gone in the Dark" },
-                { "brave.new.world", "Brave New World (2020)" }
+                { "brave.new.world", "Brave New World (2020)" },
+                { "Boruto(.*)?", "Boruto - Naruto Next Generations" }
             };
             var tabResults = mainForm.GetTab_Renames();
             foreach (TabRenames x in tabResults)
