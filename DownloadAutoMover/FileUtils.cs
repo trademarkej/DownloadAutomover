@@ -12,10 +12,12 @@ namespace DownloadAutoMover
     public class FileUtils
     {
         EpisodeParser episodeParser;
+        MovieParser movieParser;
 
         public FileUtils(string dbName)
         {
             episodeParser = new EpisodeParser(dbName);
+            movieParser = new MovieParser(dbName);
         }
 
         //----------------------------------------------------------
@@ -207,23 +209,33 @@ namespace DownloadAutoMover
                     var files = GetFiles(fp);
                     foreach (string file in files)
                     {
+                        var tmp = "";
                         TvEpisode tvEpisode = null;
-                        Movie movie = null;
+                        //Movie movie = null;
                         FileInfo fi = new FileInfo(file);
                         if (!fi.DirectoryName.Contains("Movie"))
                         {
                             tvEpisode = episodeParser.GetTvEpisode(fi.Name);
                             tvEpisode.Category = GetCategoryId(fi.FullName);
-                            tvEpisode.Path = Path.Combine(
-                                dest, 
-                                SfLists[tvEpisode.Category] + '\\' + tvEpisode.Title + '\\' + fi.Name
-                                );
-                            //SfLists[tvEpisode.Category] + '\\' + tvEpisode.Title + '\\' + fi.Name;
+                            tmp = Path.Combine(dest, SfLists[tvEpisode.Category] + '\\' + tvEpisode.Title + "\\Season " + tvEpisode.Season + '\\');
+                            tvEpisode.Path = tmp + fi.Name;
+                            if (!Directory.Exists(tmp))
+                            {
+                                CreateFolder(tmp);
+                            }
+                            tmp = tvEpisode.Path;
                         }
                         else
                         {
-                            // var show = movieParser.GetMovie(fi.Name);
+                            var movie = movieParser.GetMovie(fi.Name);
+                            tmp = "";
+                            if (!Directory.Exists(tmp))
+                            {
+                                CreateFolder(tmp);
+                            }
+                            tmp = movie.Path;
                         }
+                        MoveFile(file, tmp);
                     }
                 }
             });
@@ -293,15 +305,15 @@ namespace DownloadAutoMover
                                 string tmp = dest;
                                 foreach (string ndir in show[1].Split(','))
                                 {
-                                    tmp = System.IO.Path.Combine(tmp, ndir);
+                                    tmp = Path.Combine(tmp, ndir);
                                     CreateFolder(tmp);
                                 }
                             }
                             showDest = show[0];
                         }
-                        else if (!Directory.Exists(System.IO.Path.Combine(dest, SfLists[i])))
+                        else if (!Directory.Exists(Path.Combine(dest, SfLists[i])))
                         {
-                            CreateFolder(System.IO.Path.Combine(dest, SfLists[i]));
+                            CreateFolder(Path.Combine(dest, SfLists[i]));
                         }
                         MoveFile(file, showDest);
                         j++;

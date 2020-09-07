@@ -9,6 +9,7 @@ namespace DownloadAutoMover.Tests
         public EpisodeParser episodeParser;
         private readonly string[] ShowNames = {
             //gci -recurse | Where { !$_.PSIsContainer } | Select-Object Name
+            "[Judas] Boku no Hero Academia S4 - 13 v2 [1080p][HEVC x265 10bit][Dual-Audio][Multi-Subs]",
             "[HorribleSubs] Boruto - Naruto Next Generations - S01E140 [720p]",
             "[Hakata Ramen] Blade of the Immortal S01E14 [1080 x265].mkv",
             "[Judas] Mugen no Juunin (Blade of the Immortal) - 15 [1080p][HEVC x265 10bit][Eng-Subs].mkv",

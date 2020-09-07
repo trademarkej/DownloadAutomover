@@ -18,5 +18,8 @@ namespace DownloadAutoMover.Classes
         public string Audio { get; set; }
         [Required]
         public string Quality { get; set; }
+        [Required]
+        public int Category { get; set; }
+        public string Path { get; set; }
     }
 }

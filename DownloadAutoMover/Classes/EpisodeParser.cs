@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using DownloadAutoMover.Classes;
@@ -11,7 +11,7 @@ namespace DownloadAutoMover
         MainForm mainForm;
         private readonly string ext = "(avi|mp4|mkv)";
         private readonly string codec = @"((x|X|h|H)26(4|5|6))";
-        private readonly string quality = @"((\d{2,3})0p)";
+        private readonly string quality = @"((36|48|72|108)0(p|))";
         private readonly string year = @"(19|20)\d{2}";
         private readonly string episode = @"((e|E)[0-9]{1,3})";
         private readonly string season = @"((s|S)[0-9]{1,2})";
@@ -37,15 +37,14 @@ namespace DownloadAutoMover
             return result;
         }
 
-        
         public string GetEpisode(string str)
         {
             string result = "";
             string[] rexs = {
                 episode,
                 @"((e|E)pisode[0-9]{1,3})",
+                @"[^s|S](\d{1,3})",
                 @"(\d{1,3})"
-
             };
             foreach (string rex in rexs)
             {
@@ -54,7 +53,8 @@ namespace DownloadAutoMover
                 {
                     var tmp = Regex.Match(str, rex).ToString();
                     string[] prefixes = { "e", "E" };
-                    result = prefixes.Any(tmp.Contains) ? tmp.Remove(0, 1) : tmp;
+                    result = prefixes.Any(tmp.Contains) ? 
+                        Convert.ToInt32(tmp.Remove(0, 1)).ToString() : Convert.ToInt32(tmp).ToString();
                     break;
                 }
             }
@@ -65,6 +65,7 @@ namespace DownloadAutoMover
         {
             string result = "N/A";
             string[] rexs = {
+                @"(\[.*?\])",
                 @"((\w+)|)(\[\w+\])[^(\[" + quality + @"\])]",
                 codec + @"(.*)?(?=(\." + ext + "))"
             };
@@ -130,7 +131,8 @@ namespace DownloadAutoMover
             string[] rexs = {
                 year,
                 season,
-                @"((s|S)eason[0-9]{1,2})"
+                @"((s|S)eason[0-9]{1,2})",
+                @"((s|S)\d{1,2}(.*)?\d{1,3})"
             };
             foreach (string rex in rexs)
             {
@@ -140,6 +142,7 @@ namespace DownloadAutoMover
                     var tmp = Regex.Match(str, rex).ToString();
                     string[] prefixes = { "s", "S" };
                     result = prefixes.Any(tmp.Contains) ? tmp.Remove(0, 1) : tmp;
+                    result = result.Length == 1 ? "0" + result : result;
                     break;
                 }
             }
@@ -153,6 +156,7 @@ namespace DownloadAutoMover
                 year + @".[0-9]{1,2}.[0-9]{1,2}",
                 sp + @"(" + season + episode + @")" + sp,
                 sp + @"((s|S)eason[0-9]{1,2}(e|E)pisode[0-9]{1,3})" + sp,
+                @"((s|S)\d{1,2}" + sp + @"-" + sp + @"\d{1,3})",
                 @"(" + sp + @"\d{1,3}" + sp + ")"
             };
             foreach (string rex in rexs)
@@ -170,27 +174,32 @@ namespace DownloadAutoMover
 
         public string GetTitle(string str)
         {
-            string title = "";
-            string[] rexs = { 
-                @"(.*)?(?=(." + season + episode + "|." + year + @"|(\s\-\s\d{1,2})))"
+            string[] rexs = {
+                @"\." + ext,
+                @"(\[.*?\])",
+                @"(\-.\d{1,2})",
+                @"((s|S)[0-9]{1,2})((e|E)[0-9]{1,3})(.*)?",
+                @"(\s|\.)(s|S)\d{1,2}(.*?)(\d{1,3})",
+                codec + @"(.*)?",
+                year + @".\d{2}.\d{2}(.*)?"
             };
-            string group = @"(\[.*?\])";
+            string tmp = str;
             foreach (string rex in rexs)
             {
-                var m = Regex.Match(str, rex, RegexOptions.IgnoreCase);
-                if (m.Length > 0)
+                do
                 {
-                    var tmp = mediaFile.CapitalizeFirstLetters(
-                        m.ToString().Replace("."," ")).Trim();
-                    title = GetRexValue(tmp, group, "");
-                    title = GetRexValue(title, year, year);
-                    title = GetRenameValue(title);
-                    title = title.EndsWith("-") ? 
-                        title.Substring(0, title.Length - 1).Trim() : title;
-                    break;
-                }
+                    var m = Regex.Match(tmp, rex);
+                    if (m.Success)
+                    {
+                        tmp = tmp.Replace(m.ToString(), "").Replace(".", " ").Trim();
+                        tmp = tmp.EndsWith("-") ?
+                            tmp.Substring(0, tmp.Length - 1) : tmp;
+                    }
+                } while (Regex.Match(tmp, rex).Success);
             }
-            return title;
+            tmp = GetRexValue(tmp, year, year);
+            tmp = GetRenameValue(tmp);
+            return mediaFile.CapitalizeFirstLetters(tmp).Trim();
         }
 
         public TvEpisode GetTvEpisode(string str)
@@ -208,5 +217,5 @@ namespace DownloadAutoMover
             };
             return tvEpisode;
         }
-    }   
+    }
 }
